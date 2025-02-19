@@ -1,0 +1,1 @@
+SELECT Employee, Department, Salary, SUM(Salary) OVER (PARTITION BY Department) AS Total_Department_Salary FROM Employee_Salaries;
