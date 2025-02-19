@@ -1,0 +1,1 @@
+WITH SalesCTE AS (\n    SELECT employee_id, SUM(sales_amount) AS total_sales\n    FROM sales_records\n    WHERE sales_date >= '2023-01-01'\n    GROUP BY employee_id\n)\nSELECT employee_id, total_sales\nFROM SalesCTE\nWHERE total_sales > 50000;
