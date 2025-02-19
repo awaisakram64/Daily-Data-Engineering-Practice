@@ -1,0 +1,1 @@
+SELECT employees.name, employees.department, emp_details.avg_salary FROM employees, LATERAL (SELECT AVG(salary) AS avg_salary FROM employee_salaries WHERE employee_salaries.department = employees.department) emp_details;
