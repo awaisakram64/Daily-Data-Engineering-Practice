@@ -1,0 +1,12 @@
+CREATE TABLE sales (
+    sale_id INT PRIMARY KEY,
+    sale_date DATE,
+    amount DECIMAL(10, 2)
+) PARTITION BY RANGE (YEAR(sale_date)) (
+    PARTITION p2019 VALUES LESS THAN (2020),
+    PARTITION p2020 VALUES LESS THAN (2021),
+    PARTITION p2021 VALUES LESS THAN (2022)
+);
+
+-- To query partitioned data for 2020
+SELECT * FROM sales PARTITION (p2020) WHERE amount > 1000;
