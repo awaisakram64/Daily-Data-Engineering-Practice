@@ -1,0 +1,1 @@
+WITH RECURSIVE org_chart AS ( SELECT employee_id, manager_id, employee_name FROM employees WHERE manager_id IS NULL UNION ALL SELECT e.employee_id, e.manager_id, e.employee_name FROM employees e INNER JOIN org_chart oc ON e.manager_id = oc.employee_id ) SELECT * FROM org_chart;
