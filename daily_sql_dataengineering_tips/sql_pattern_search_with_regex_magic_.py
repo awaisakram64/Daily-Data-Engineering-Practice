@@ -1,0 +1,1 @@
+SELECT * FROM customers WHERE email ~ '^[a-z]+\.[a-z]+@example\.com$';
