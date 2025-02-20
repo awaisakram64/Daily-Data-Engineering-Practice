@@ -1,0 +1,1 @@
+SELECT original_time, original_time AT TIME ZONE 'UTC' AS local_time FROM (VALUES (TIMESTAMP '2023-10-04 15:00:00')) AS t(original_time);
