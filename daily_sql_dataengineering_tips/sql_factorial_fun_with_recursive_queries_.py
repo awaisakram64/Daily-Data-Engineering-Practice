@@ -1,0 +1,1 @@
+WITH RECURSIVE FactorialCTE (n, factorial) AS (  SELECT 1, 1  UNION ALL  SELECT n + 1, factorial * (n + 1)  FROM FactorialCTE  WHERE n < 5)SELECT factorial FROM FactorialCTE WHERE n = 5;
