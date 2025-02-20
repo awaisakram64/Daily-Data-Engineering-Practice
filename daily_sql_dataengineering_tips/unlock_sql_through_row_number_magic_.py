@@ -1,0 +1,1 @@
+SELECT id, transaction_date, amount, ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY transaction_date DESC) AS transaction_rank FROM transactions;
