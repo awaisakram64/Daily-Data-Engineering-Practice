@@ -1,0 +1,1 @@
+SELECT customers.id, customers.name, lat.transaction_date, lat.amount FROM customers CROSS JOIN LATERAL ( SELECT transactions.transaction_date, transactions.amount FROM transactions WHERE transactions.customer_id = customers.id ORDER BY transactions.transaction_date DESC LIMIT 1 ) AS lat;
