@@ -1,0 +1,1 @@
+SELECT customer_id, COALESCE(email, 'noemail@domain.com') AS email_address FROM customers;
