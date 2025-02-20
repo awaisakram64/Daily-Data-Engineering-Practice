@@ -1,0 +1,1 @@
+SELECT sensor_id, AVG(reading) as avg_reading, MAX(reading) as max_reading, MIN(reading) as min_reading FROM sensor_logs GROUP BY sensor_id;
