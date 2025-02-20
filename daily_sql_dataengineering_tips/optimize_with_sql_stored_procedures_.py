@@ -1,0 +1,1 @@
+CREATE PROCEDURE DailyTransactionSummary AS SELECT Date, SUM(Amount) AS TotalAmount FROM Transactions WHERE Date = CONVERT(DATE, GETDATE()) GROUP BY Date; EXEC DailyTransactionSummary;
