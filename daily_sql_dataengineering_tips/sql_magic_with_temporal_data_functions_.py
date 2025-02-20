@@ -1,0 +1,1 @@
+SELECT TO_CHAR(NOW(), 'Dy, DD Mon YYYY HH24:MI:SS') AS formatted_date;
