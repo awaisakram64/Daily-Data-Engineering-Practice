@@ -1,0 +1,1 @@
+SELECT o.order_id, o.customer_id, p.product_name, p.price FROM orders o CROSS APPLY ( SELECT TOP 1 product_name, price FROM products p WHERE p.product_id = o.product_id ORDER BY p.updated_at DESC ) p;
