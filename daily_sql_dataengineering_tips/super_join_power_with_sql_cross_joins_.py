@@ -1,0 +1,1 @@
+SELECT A.product_name AS Product1, B.product_name AS Product2 FROM products AS A CROSS JOIN products AS B;
