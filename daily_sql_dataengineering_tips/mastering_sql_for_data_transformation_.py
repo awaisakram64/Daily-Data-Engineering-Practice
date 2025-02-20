@@ -1,0 +1,1 @@
+SELECT employee_id, SUM(sale_amount) AS total_sales \nFROM sales_transactions \nGROUP BY employee_id \nORDER BY total_sales DESC;
