@@ -1,0 +1,1 @@
+SELECT SalesRep, Month, SalesValue FROM (   SELECT SalesRep, Jan, Feb, Mar FROM Sales) p UNPIVOT (   SalesValue FOR Month IN (Jan AS 'January', Feb AS 'February', Mar AS 'March') ) AS Unpvt;
