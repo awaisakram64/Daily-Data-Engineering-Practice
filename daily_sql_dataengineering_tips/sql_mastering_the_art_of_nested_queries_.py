@@ -1,0 +1,1 @@
+SELECT manager_id, department_name FROM departments WHERE budget > (SELECT AVG(budget) FROM departments);
