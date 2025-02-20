@@ -1,0 +1,1 @@
+SELECT region, product, SUM(sales) AS total_sales FROM sales_data GROUP BY ROLLUP(region, product);
