@@ -1,0 +1,1 @@
+WITH RECURSIVE EmployeeHierarchy AS ( SELECT EmployeeID, ManagerID, EmployeeName, 1 AS Level FROM Employees WHERE ManagerID IS NULL UNION ALL SELECT e.EmployeeID, e.ManagerID, e.EmployeeName, Level + 1 FROM Employees e INNER JOIN EmployeeHierarchy eh ON e.ManagerID = eh.EmployeeID ) SELECT * FROM EmployeeHierarchy;
