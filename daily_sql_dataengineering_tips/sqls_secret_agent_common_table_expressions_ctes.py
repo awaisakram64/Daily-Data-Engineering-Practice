@@ -1,0 +1,1 @@
+WITH Sales_CTE AS ( SELECT EmployeeID, SUM(Sales) as TotalSales FROM EmployeeSales GROUP BY EmployeeID ) SELECT EmployeeID, TotalSales FROM Sales_CTE WHERE TotalSales > 10000;
