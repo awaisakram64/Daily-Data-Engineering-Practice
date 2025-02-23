@@ -1,0 +1,1 @@
+WITH sales_per_region AS (  SELECT region, SUM(sales) AS total_sales  FROM sales_data  GROUP BY region)SELECT region, total_salesFROM sales_per_regionWHERE total_sales > 10000;
