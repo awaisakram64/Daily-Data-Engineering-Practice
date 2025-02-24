@@ -1,0 +1,1 @@
+SELECT * FROM (SELECT city, month, temperature FROM weather_data) AS SourceTable PIVOT (AVG(temperature) FOR month IN ([Jan], [Feb], [Mar], [Apr])) AS PivotTable;
