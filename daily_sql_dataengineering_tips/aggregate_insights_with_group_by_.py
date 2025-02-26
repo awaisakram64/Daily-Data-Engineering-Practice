@@ -1,0 +1,1 @@
+SELECT category, SUM(total_price) AS total_revenue\nFROM transactions\nGROUP BY category;
