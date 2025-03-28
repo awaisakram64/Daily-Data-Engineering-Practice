@@ -1,0 +1,1 @@
+SELECT customers.name, orders.order_id, orders.amount FROM customers JOIN orders ON customers.id = orders.customer_id WHERE orders.amount > 100;
