@@ -1,0 +1,1 @@
+SELECT employee_id, COALESCE(phone_number, 'No Phone') AS phone_info FROM employees WHERE COALESCE(phone_number, '') != '';
